@@ -9,6 +9,7 @@ import SignUp from './components/SignUp/SignUp';
 import RecoverPassword from './components/RecoverPassword/RecoverPassword';
 import Cart from './components/Cart/Cart';
 import RequiredAuth from './components/RequiredAuth/RequiredAuth';
+import SowUser from './components/ShowUser/SowUser';
 
 function App() {
   return (
@@ -25,7 +26,9 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path='/recoverpassword' element={<RecoverPassword />}></Route>
+        <Route path='/users' element={<SowUser />}></Route>
       </Routes>
+
       <Footer />
     </div>
   );

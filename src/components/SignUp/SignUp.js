@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {uid} from 'uid';
 import auth from "../../firebase.init";
+import { getDatabase, ref, set} from "firebase/database";
 
 const SignUp = () => {
+  const db = getDatabase();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [fName, setFName] = useState("");
+  const [lName, setLName] = useState("");
   const [error, setError] = useState("");
   const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
@@ -16,11 +21,17 @@ const SignUp = () => {
   const handlePasswordBlur = (event) => {
     setPassword(event.target.value);
   };
+  const handleFNameBlur = (event) => {
+    setFName(event.target.value);
+  };
+  const handleLNameBlur = (event) => {
+    setLName(event.target.value);
+  };
 
   if (user) {
-    navigate("/login");
+    navigate("/");
   }
-  const handleOnSubmit = (event) => {
+  const handleOnSubmit = async (event) => {
     event.preventDefault();
     if (
       !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(
@@ -33,6 +44,32 @@ const SignUp = () => {
       return;
     }
     createUserWithEmailAndPassword(email, password);
+    const uuid = uid();
+    set(ref(db,`/${uuid}`),{
+      fName,
+      lName,
+      email,
+      password,
+      uuid,
+    });
+
+    // const res = fetch(
+    //   "https://simple-ecommerce-task-default-rtdb.firebaseio.com/userRecords.json",
+    //   {
+    //     method:"POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       fName,
+    //       lName,
+    //       email,
+    //       password,
+    //     }),
+    //   }
+    //   );
+
+
   };
     return (
         <div className='w-full'>
@@ -41,8 +78,8 @@ const SignUp = () => {
             <h1 className='text-4xl font-bold'>CREATE ACCOUNT</h1>
             </div>
             <form onSubmit={handleOnSubmit} className='flex flex-col w-[40%] mx-auto'>
-                <input className='border mt-8 py-2 pl-4' type="text" name="firstname" id="firstname"  placeholder='First name' required/>
-                <input className='border mt-8 py-2 pl-4' type="text" name="lastname" id="lastname"  placeholder='Last name' required/>
+                <input onBlur={handleFNameBlur} className='border mt-8 py-2 pl-4' type="text" name="firstname" id="firstname"  placeholder='First name' required/>
+                <input onBlur={handleLNameBlur} className='border mt-8 py-2 pl-4' type="text" name="lastname" id="lastname"  placeholder='Last name' required/>
                 <input onBlur={handleEmailBlur} className='border mt-8 py-2 pl-4' placeholder='Email' type="email" name="" id=""  required/>
                 <input onBlur={handlePasswordBlur} className='border mt-5 py-2 pl-4 mb-12' placeholder='Password' type="password" name="" id="" required />
                 <p style={{ color: "red" }}>{error}</p>
