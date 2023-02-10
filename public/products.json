@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Buckwheat Molasses",
+        "price": "7.99",
+        "description": "Weight 17.4 oz | Good Seedy Buckwheat",
+        "img": "https://i.ibb.co/XZqsYvG/Classy-Main-1.png"
+    },
+    {
+        "id": 2,
+        "name": "Classy Slice",
+        "price": "7.99",
+        "description": "Weight 16.2 oz | Classy Slice",
+        "img": "https://i.ibb.co/7bMx5nM/Classy-Main-2.png"
+    },
+    {
+        "id": 3,
+        "name": "Wild Buns",
+        "price": "7.99",
+        "description": "Weight 11.0 oz | Wild Buns",
+        "img": "https://i.ibb.co/qD6NykZ/Classy-Main-3.png"
+    },
+    {
+        "id": 4,
+        "name": "Hemp Hemp Hooray",
+        "price": "7.99",
+        "description": "Weight 12.0 oz | Hemp Hemp Hooray",
+        "img": "https://i.ibb.co/qD6NykZ/Classy-Main-3.png"
+    },
+    {
+        "id": 5,
+        "name": "Buckwheat Molasses",
+        "price": "7.99",
+        "description": "Weight 17.4 oz | Good Seedy Buckwheat Molasses",
+        "img": "https://i.ibb.co/XZqsYvG/Classy-Main-1.png"
+    },
+    {
+        "id": 6,
+        "name": "Wild Buns",
+        "price": "7.99",
+        "description": "Weight 11.0 oz | Wild Buns",
+        "img": "https://i.ibb.co/qD6NykZ/Classy-Main-3.png"
+    }
+]

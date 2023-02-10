@@ -9,10 +9,12 @@ import spoon from "../../images/baking1.png";
 import vegan from '../../images/vegan.png';
 import nosugar from '../../images/nosugar.png';
 import allergy from '../../images/allergenic.png'
+import ProductCarousel from "../ProductCarousel/ProductCarousel";
 
 const Home = () => {
   return (
     <div>
+        {/* section1 */}
       <div className="relative min-h-screen">
         <div className="absolute top-[100px] left-[44px] left-50">
           <h1 className="text-5xl font-bold uppercase">
@@ -58,7 +60,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+        {/* section2 */}
       <div className="mt-24 grid grid-cols-3">
         <div class="col-span-2">
           <img className="w-[800px] h-[520px]" src={happy} alt="happycamp" />
@@ -124,6 +126,15 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* section3 */}
+      <div className="mt-20">
+        <div className="text-center">
+            <h1 className="text-4xl font-bold">Featured Products</h1>
+        </div>
+        <div className="m-20">
+            <ProductCarousel />
         </div>
       </div>
     </div>
