@@ -37,11 +37,13 @@ const Header = () => {
         </li>
       </ul>
       <div className='ml-32 mr-20 flex'>
-      <FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mr-3' icon={faShoppingCart} />
+        <Link className='flex' to='/cart'>
+        <FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mr-3' icon={faShoppingCart} />
       <div className='text-md font-semibold'>
         <p>62 USD</p>
         <p className='text-xs mt-[-5px] pt-0'>2 items</p>
       </div>
+        </Link>   
       <FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mx-2' icon={faUserAlt} />
       </div>
     </div>
