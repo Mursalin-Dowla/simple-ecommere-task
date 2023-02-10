@@ -50,8 +50,9 @@ const Header = () => {
         <p>62 USD</p>
         <p className='text-xs mt-[-5px] pt-0'>2 items</p>
       </div>
-        </Link>   
-      <FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mx-2' icon={faUserAlt} />
+        </Link>  
+        <Link to='/users'><FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mx-2 cursor-pointer' icon={faUserAlt} /></Link> 
+      
       {user && <span><button className='bg-[#ABC480] text-white p-2 rounded-md' onClick={handleSignOut}>sign out</button></span>
 }
       </div>
