@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { signOut } from 'firebase/auth';
 import logo from '../../../images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart, faUserAlt } from '@fortawesome/free-solid-svg-icons'
+import auth from '../../../firebase.init';
 
 const Header = () => {
-    return (
-        
+  const [user] = useAuthState(auth);
+
+  const handleSignOut = ()=>{
+    signOut(auth);
+  }
+    return (    
 <nav className="bg-white  px-2  py-2.5">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
     <a href="/" className="flex items-center">
@@ -45,6 +52,8 @@ const Header = () => {
       </div>
         </Link>   
       <FontAwesomeIcon className='text-[#ABC480] text-xl mt-3 mx-2' icon={faUserAlt} />
+      {user && <span><button className='bg-[#ABC480] text-white p-2 rounded-md' onClick={handleSignOut}>sign out</button></span>
+}
       </div>
     </div>
   </div>

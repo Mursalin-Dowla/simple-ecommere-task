@@ -41,10 +41,10 @@ const SignUp = () => {
             <h1 className='text-4xl font-bold'>CREATE ACCOUNT</h1>
             </div>
             <form onSubmit={handleOnSubmit} className='flex flex-col w-[40%] mx-auto'>
-                <input className='border mt-8 py-2 pl-4' type="text" name="firstname" id="firstname"  placeholder='First name'/>
-                <input className='border mt-8 py-2 pl-4' type="text" name="lastname" id="lastname"  placeholder='Last name'/>
-                <input onBlur={handleEmailBlur} className='border mt-8 py-2 pl-4' placeholder='Email' type="email" name="" id="" />
-                <input onBlur={handlePasswordBlur} className='border mt-5 py-2 pl-4 mb-12' placeholder='Password' type="password" name="" id="" />
+                <input className='border mt-8 py-2 pl-4' type="text" name="firstname" id="firstname"  placeholder='First name' required/>
+                <input className='border mt-8 py-2 pl-4' type="text" name="lastname" id="lastname"  placeholder='Last name' required/>
+                <input onBlur={handleEmailBlur} className='border mt-8 py-2 pl-4' placeholder='Email' type="email" name="" id=""  required/>
+                <input onBlur={handlePasswordBlur} className='border mt-5 py-2 pl-4 mb-12' placeholder='Password' type="password" name="" id="" required />
                 <p style={{ color: "red" }}>{error}</p>
                 <input className='bg-[#01BFD7] cursor-pointer py-2 mb-5 text-white' type="submit" value="SIGNUP" />
             </form>
