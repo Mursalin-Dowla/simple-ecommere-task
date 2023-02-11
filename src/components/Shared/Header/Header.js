@@ -16,9 +16,9 @@ const Header = () => {
     return (    
 <nav className="bg-white  px-2  py-2.5">
   <div className="container flex flex-wrap items-center justify-between mx-auto">
-    <a href="/" className="flex items-center">
+    <Link to="/" className="flex items-center">
         <img src={logo} className="h-6 mr-3" alt=" Logo" />
-    </a>
+    </Link>
     <div className="flex w-auto" id="navbar-default">
       <ul className="flex p-4 mt-0 mr-20 flex-row space-x-8  text-sm font-medium bg-white">
         <li>

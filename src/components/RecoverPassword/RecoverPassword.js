@@ -22,7 +22,7 @@ const RecoverPassword = () => {
              <div className='w-full'>
             <div className='text-center'>
                  <div className='mt-20'>
-                <h1 className='text-4xl font-bold'>RECOVER PASSWORD</h1>
+                <h1 className='text-4xl love-font'>RECOVER PASSWORD</h1>
                 </div>
                 <form onSubmit={handleForgetPassword} className='flex flex-col w-[40%] mx-auto mb-10'>
                     <input onBlur={handleEmailBlur} className='border mt-8 py-2 pl-4' placeholder='Email' type="email" name="" id="" />

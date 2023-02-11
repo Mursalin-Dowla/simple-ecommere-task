@@ -75,7 +75,7 @@ const SignUp = () => {
         <div className='w-full'>
         <div className='text-center'>
              <div className='mt-20'>
-            <h1 className='text-4xl font-bold'>CREATE ACCOUNT</h1>
+            <h1 className='text-4xl love-font'>CREATE ACCOUNT</h1>
             </div>
             <form onSubmit={handleOnSubmit} className='flex flex-col w-[40%] mx-auto'>
                 <input onBlur={handleFNameBlur} className='border mt-8 py-2 pl-4' type="text" name="firstname" id="firstname"  placeholder='First name' required/>

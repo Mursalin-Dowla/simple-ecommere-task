@@ -16,9 +16,9 @@ useEffect(()=>{
 },[])
 
   return (
-    <div>
+    <div className="mb-20">
         <div className="text-center">    
-      <h1 className="text-2xl font-bold uppercase mt-20">User List</h1>
+      <h1 className="text-2xl love-font uppercase mt-20">User List</h1>
         </div>
         <table className="w-[50%] mx-auto text-gray-500 text-sm my-5">
             <thead>

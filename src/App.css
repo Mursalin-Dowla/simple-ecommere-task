@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face{
+  font-family: aloveofthunder;
+  src: url('./Fonts/aloveofthunder.ttf');
+}
+
+.love-font{
+  font-family: aloveofthunder;
+}

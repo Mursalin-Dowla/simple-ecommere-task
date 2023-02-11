@@ -17,7 +17,7 @@ const Home = () => {
         {/* section1 */}
       <div className="relative min-h-screen">
         <div className="absolute top-[100px] left-[44px] left-50">
-          <h1 className="text-5xl font-bold uppercase">
+          <h1 className="text-5xl  uppercase love-font">
             Eat Organic & <br /> Gluten Free Healthy Food
           </h1>
           <p className="text-xl font-semibold mt-2">
@@ -67,7 +67,7 @@ const Home = () => {
         </div>
 
         <div class="mt-[-35px]">
-          <div className="text-3xl font-bold uppercase">
+          <div className="text-3xl love-font uppercase">
             <h1>
               Choke-Full OF <br /> Anicent Whole Grains
             </h1>
@@ -131,7 +131,7 @@ const Home = () => {
       {/* section3 */}
       <div className="mt-20">
         <div className="text-center">
-            <h1 className="text-4xl font-bold">Featured Products</h1>
+            <h1 className="text-4xl love-font">Featured Products</h1>
         </div>
         <div className="m-20">
             <ProductCarousel />
